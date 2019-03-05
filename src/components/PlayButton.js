@@ -1,6 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const buttonStyle = {
+  border: 'none',
+  background: 'transparent',
+  cursor: 'pointer',
+};
+
 class PlayButton extends React.Component {
   constructor(props) {
     super(props);
@@ -25,7 +31,11 @@ class PlayButton extends React.Component {
 
   render() {
     return (
-      <button className={this.props.class} onClick={this.play}>
+      <button
+        style={buttonStyle}
+        className={this.props.class}
+        onClick={this.play}
+      >
         {this.getButtonText()}
       </button>
     );
