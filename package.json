@@ -1,5 +1,12 @@
 {
-  "name": "react-play-button",
+  "name": "fluent-react-play-button",
+  "description": "A drop in play button for React apps",
+  "keywords": [
+    "react",
+    "play button",
+    "play",
+    "button"
+  ],
   "version": "1.0.0",
   "main": "src/lib/PlayButton.js",
   "license": "MIT",
