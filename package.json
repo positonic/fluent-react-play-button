@@ -7,12 +7,13 @@
     "play",
     "button"
   ],
-  "version": "1.0.5",
-  "main": "src/lib/PlayButton.js",
+  "version": "1.0.6",
+  "main": "dist/PlayButton.js",
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --hot --mode development",
-    "prod": "webpack --mode production"
+    "prod": "webpack --mode production",
+    "build": "babel --out-dir dist src/lib --presets=@babel/preset-env,@babel/preset-react"
   },
   "husky": {
     "hooks": {
@@ -26,12 +27,14 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
-    "@babel/preset-react": "^7.0.0-beta.39",
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.3.4",
+    "@babel/preset-env": "7.3.4",
+    "@babel/preset-react": "7.0.0",
     "@babel/preset-stage-0": "^7.0.0-beta.39",
     "babel-loader": "8.0.0-beta.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-react": "6.24.1",
     "clean-webpack-plugin": "^0.1.18",
     "css-loader": "^0.28.9",
     "express": "^4.16.4",
