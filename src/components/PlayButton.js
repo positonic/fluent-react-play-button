@@ -1,39 +1,38 @@
 import React from 'react';
-const buttonStyle = {
-  border: 'none',
-  background: 'transparent',
-  cursor: 'pointer',
-};
+import PropTypes from 'prop-types';
 
 class PlayButton extends React.Component {
-  state = {
-    isPlaying: this.props.isPlaying || false,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      buttonText: 'Play main',
+    };
+    this.play = this.play.bind(this);
+    this.getButtonText = this.getButtonText.bind(this);
+  }
 
   getButtonText() {
-    return this.state.isPlaying ? (
+    return this.props.isPlaying === true ? (
       <i className="fa fa-stop-circle fa-6" aria-hidden="true" />
     ) : (
       <i className="fa fa-play-circle fa-6" aria-hidden="true" />
     );
   }
 
-  play = () => {
-    this.props.playButtonClick(!this.state.isPlaying);
-    this.setState({ isPlaying: !this.state.isPlaying });
-  };
+  play() {
+    this.props.playButtonClick();
+  }
 
   render() {
     return (
-      <button
-        style={buttonStyle}
-        className={this.props.class}
-        onClick={this.play}
-      >
+      <button className={this.props.class} onClick={this.play}>
         {this.getButtonText()}
       </button>
     );
   }
 }
-
+PlayButton.propTypes = {
+  playButtonClick: PropTypes.func.isRequired,
+  isPlaying: PropTypes.bool.isRequired,
+};
 export default PlayButton;
