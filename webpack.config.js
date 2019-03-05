@@ -21,6 +21,9 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    open: true,
+  },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({

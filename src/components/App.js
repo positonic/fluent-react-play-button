@@ -1,7 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
 
-import PlayButton from './PlayButton';
+import PlayButton from '../lib/PlayButton';
 
 class App extends React.Component {
   play(state) {
