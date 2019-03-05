@@ -7,7 +7,7 @@
     "play",
     "button"
   ],
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "dist/PlayButton.js",
   "license": "MIT",
   "scripts": {
